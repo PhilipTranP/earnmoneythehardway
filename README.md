@@ -1,2 +1,1 @@
 # earnmoneythehardway
-# earnmoneythehardway

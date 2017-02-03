@@ -1,0 +1,28 @@
+<template name="about_posts">
+  <div class="container pt">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>About Posts</h2>
+        <a href="/admin/about_posts/add" class="btn btn-primary btn-tiny">Add Post</a>
+        <br><br>
+        <table class="table table-striped">
+          <tr>
+            <th>Item Title</th>
+            <th>Last Update</th>
+          </tr>
+          {{#each aboutPosts}}
+            <tr>
+              <td>{{title}}</td>
+              <td>{{formatDate updatedAt}}</td>
+              <td><a href="/admin/about_posts/{{_id}}/edit" class="btn btn-default btn-tiny">Edit</a><button class="btn btn-default delete_about_post">Delete</button></td>
+            </tr>
+          {{else}}
+            <tr>
+              <td>There are no about posts</td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</template>

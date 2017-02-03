@@ -1,0 +1,18 @@
+<template name="About">
+	{{#each aboutPosts}}
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h4>{{#markdown}}{{title}}{{/markdown}}</h4>
+					<p><bd>Sequence: {{sequence}} - {{updatedAt}}</bd></p>
+					<p>{{#markdown}}{{body}}{{/markdown}}</p>
+					<p><a href="/about/about_posts/{{_id}}" target="/about/about_posts/{{_id}}"><img class ="img-responsive" src="{{aboutPostImage}}" alt="" /></a></p>
+				</div>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div>
+	{{else}}
+		<p>There are no posts</p>
+	{{/each}}
+</template>
